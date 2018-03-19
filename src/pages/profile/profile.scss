@@ -1,0 +1,12 @@
+page-profile {
+    .swipeImage {
+        border: 2px solid color($colors, secondary);
+        border-radius: 20px;
+        box-shadow: 5px 5px 30px #523F38;
+    }
+    .scroll-content {
+        background-color: color($colors, mainBackground);
+        color: color($colors, secondary);
+    }
+
+}

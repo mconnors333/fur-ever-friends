@@ -1,17 +1,33 @@
-<ion-header>
-  <ion-navbar>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="title-background">
+    <h2 padding class="appTitle">Fur-ever Friends!</h2>
+  </div>
+  <div text-center>
+    <img class="swipeImage" src="{{user.photo}}" (swipe)="likeOrPassSwipe($event)" (click)="goToProfile()" style="height: 100%; width: 250px; border-radius: 20px;">
+  </div>
+
+  <div padding>
+    <div text-center>
+      <div>
+        <span>Pet Rating:</span>
+        <ul class="starRating" *ngFor="let i of user.dogRating">
+            <li class="fa fa-star"></li>
+        </ul>      
+      </div>
+      <!-- <div>
+        <span>Owner Rating:</span>
+        <ul class="starRating" *ngFor="let i of user.ownerRating">
+            <li class="fa fa-star"></li>
+        </ul>
+      </div> -->
+    </div>
+  </div>
+
+
+  <div text-center padding>
+    <button ion-button color="secondary" (click)="pass()">Pass</button>
+    <button ion-button color="secondary" (click)="like()">Like</button>
+  </div>
 </ion-content>
+
